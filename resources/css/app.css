@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+
+    --color-primary: #C90016;
+    --color-primary-light: #FFF0F2;
+    --color-dark: #222222;
+}
+
+@layer components {
+    .site-header-inner,
+    .site-header-logo {
+        transition: padding 200ms ease, height 200ms ease;
+    }
+
+    .site-header.is-compact .site-header-inner {
+        padding-block: 0.5rem;
+    }
+
+    .site-header.is-compact .site-header-logo {
+        height: 2.5rem;
+    }
+
+    @media (min-width: 40rem) {
+        .site-header.is-compact .site-header-logo {
+            height: 2.75rem;
+        }
+    }
+}
